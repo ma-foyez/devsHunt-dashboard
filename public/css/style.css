@@ -607,6 +607,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1rem;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -658,6 +666,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(114 124 245 / var(--tw-border-opacity));
 }
 
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 .bg-\[\#727CF5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(114 124 245 / var(--tw-bg-opacity));
@@ -671,6 +684,56 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#DEF6FD\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 246 253 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#c6e7f1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(198 231 241 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#cbf3ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 243 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#6bcdeb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 205 235 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#79d9f7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(121 217 247 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#a1e9ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 233 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#b8eeff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(184 238 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#dcf7ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 247 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d3f5ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(211 245 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .bg-login-bg {
@@ -834,9 +897,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-color: #818cf8;
 }
 
+.hover\:outline-red-600:hover {
+  outline-color: #dc2626;
+}
+
+.hover\:outline-red-400:hover {
+  outline-color: #f87171;
+}
+
 .focus\:ring-\[\#727CF5\]:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(114 124 245 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-red-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
 }
 
 @media (min-width: 768px) {
