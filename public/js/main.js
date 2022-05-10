@@ -1,30 +1,15 @@
 
 /***************Get Current Year For Footer Section*********** */
-document.getElementById("year").innerHTML = new Date().getFullYear();
+// document.getElementById("year").innerHTML = new Date().getFullYear();
 
 $(document).ready(function () {
 
-    /*************** Smooth scrolling to all links *********** */
-    $("a").on('click', function (event) {
+    /*************** Open Language Menu List *********** */
+    // $('.language-list').removeClass('block');
+    // $('.language-list').hide();
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
+    $(".language").on('click', function () {
+        $(".language-list").toggleClass("hidden");
     });
 
     /*************** Nav Responsive *********** */
@@ -39,6 +24,8 @@ $(document).ready(function () {
     $(window).click(function () {
         $('.mobile-navbar').hide("slide");
         $('.mobile-navbar').addClass('hidden');
+        // $(".language-list").hide("slide");
+
         $('#toggle-icon').addClass('fa-bars');
         $('#toggle-icon').removeClass('fa-times');
     });

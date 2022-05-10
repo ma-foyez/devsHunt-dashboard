@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevsHunt || Dashboard</title>
+
+    <!-- Font Awesome Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <section class="flex">
+        <!-- dashboard sidebar start -->
+        <div class="bg-gray-700 min-h-[100vh] w-[20%] text-white relative">
+            <div class="fixed left-0 top-0">
+                <h3>Company</h3>
+            </div>
+        </div>
+        <!-- dashboard sidebar end -->
+
+        <!-- Dashboard content start -->
+        <div class="w-[80%] relative ">
+            <!-- Dashboard nav start -->
+            <nav class="bg-white shadow sticky top-0 left-0 w-full ">
+                <div class="flex justify-between">
+
+                    <div class="flex items-center ml-3">
+                        <!-- <i class="fa-solid fa-bars-staggered text-lg cursor-pointer"></i> -->
+                        <i class="fa-solid fa-outdent text-2xl cursor-pointer"></i>
+                        <div class="bg-slate-200 rounded-sm ml-6">
+                            <i class="fa-solid fa-magnifying-glass text-lg ml-3"></i>
+                            <input type="search" placeholder="Search..." class="border-0 outline-none p-2 bg-slate-200">
+                            <button class="bg-red-600 py-2 px-6 text-white rounded-sm shadow-md font-medium">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <ul class="list-none flex">
+                            <li class="group relative">
+                                <a href="#" class="flex items-center language" id="language">
+                                    <img src="./images/languages/us.jpg" alt="English" class="w-7">
+                                    <span class="text-gray-500 text-base ml-2 font-nunito font-medium">English</span>
+                                    <i class="fa-solid fa-angle-down text-gray-500 text-base ml-2"></i>
+                                </a>
+
+                                <div class="bg-white absolute top-11 hidden shadow-md min-w-[180px] z-50 language-list" id="language-list">
+                                    <ul class="list-none">
+                                        <li>
+                                            <a href="#" class="flex items-center bg-white hover:bg-slate-50 py-4 px-4">
+                                                <img src="./images/languages/bangladesh.png" alt="English" class="w-7">
+                                                <span
+                                                    class="text-gray-500 text-base ml-2 font-nunito font-medium">Bangladesh
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center bg-white hover:bg-slate-50 py-4 px-4">
+                                                <img src="./images/languages/germany.jpg" alt="English" class="w-7">
+                                                <span
+                                                    class="text-gray-500 text-base ml-2 font-nunito font-medium">German
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center bg-white hover:bg-slate-50 py-4 px-4">
+                                                <img src="./images/languages/italy.jpg" alt="English" class="w-7">
+                                                <span
+                                                    class="text-gray-500 text-base ml-2 font-nunito font-medium">Italian
+                                                </span>
+                                            </a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-500 ml-6 text-xl">
+                                    <i class="fa-solid fa-bell"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-500 ml-6 text-xl">
+                                    <i class="fa-solid fa-list"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-500 ml-6 text-xl">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="flex items-center ml-8 bg-slate-100 p-2">
+                            <img src="./images/avatar1.png" alt="user" class="w-8 h-8 rounded-full">
+                            <div class="ml-2">
+                                <h5 class="text-gray-600 font-semibold font-nunito">Dominic Keller</h5>
+                                <p class="text-gray-400 text-sm">Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Dashboard nav end -->
+
+            <!-- Dashboard main content start -->
+            <div class="p-4">
+
+            </div>
+            <!-- Dashboard main content end -->
+
+        </div>
+        <!-- Dashboard content end -->
+    </section>
+
+    <!-- Script  -->
+    <script src="./vendors/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Load Custom Script  -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
