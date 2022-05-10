@@ -6,7 +6,7 @@ module.exports = {
         "nunito": ['Nunito', 'sans-serif'],
       },
       backgroundImage: {
-        'hero': "url('./../images/banner.png')"
+        'login-bg': "url('./../images/bg-pattern-light.svg')"
       },
       // container: {
       //   padding: "1.5rem"
