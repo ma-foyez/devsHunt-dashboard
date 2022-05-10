@@ -1,7 +1,3 @@
-
-/***************Get Current Year For Footer Section*********** */
-// document.getElementById("year").innerHTML = new Date().getFullYear();
-
 $(document).ready(function () {
 
     /*************** Open Language Menu List *********** */
@@ -14,32 +10,44 @@ $(document).ready(function () {
         $(".language-list").addClass("hidden");
     });
 
-    /*************** Nav Responsive *********** */
-    $('.mobile-navbar').removeClass('hidden');
-    $('.mobile-navbar').hide();
+    /*************** Toggle Setting Menu *********** */
+    // $('.open-settings').removeClass('hidden');
+    // $('.open-settings').hide();
 
-    $('.navbar-toggle').on('click', function () {
-        $('.mobile-navbar').toggle('slide');
-        $('#toggle-icon').toggleClass('fa-times');
+    $('.toggle-setting').on('click', function () {
+        $('.open-settings').toggle('slide');
     });
 
-    $(window).click(function () {
-        $('.mobile-navbar').hide("slide");
-        $('.mobile-navbar').addClass('hidden');
-        // $(".language-list").hide("slide");
+    // $(window).click(function () {
+    //     $('.open-settings').hide("slide");
+    //     $('.open-settings').addClass('hidden');
+    // });
 
-        $('#toggle-icon').addClass('fa-bars');
-        $('#toggle-icon').removeClass('fa-times');
+    // $('.toggle-setting').on('click', function (event) {
+    //     event.stopPropagation();
+    // });
+
+    // $('.open-settings').on('click', function (event) {
+    //     event.stopPropagation();
+    // });
+
+    /*************** Store Theme in local storage *********** */
+    if (localStorage.theme === 'dark') {
+        document.documentElement.classList.add('dark')
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+    
+    $('#change_theme').on('click', function () {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+            localStorage.removeItem("theme")
+            document.documentElement.classList.remove('dark')
+        } else {
+            localStorage.setItem("theme", "dark")
+            document.documentElement.classList.add('dark')
+        }
     });
-
-    $('.navbar-toggle').on('click', function (event) {
-        event.stopPropagation();
-    });
-
-    $('.mobile-navbar').on('click', function (event) {
-        event.stopPropagation();
-    });
-
-
 
 });
+
