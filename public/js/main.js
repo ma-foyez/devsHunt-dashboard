@@ -5,11 +5,13 @@
 $(document).ready(function () {
 
     /*************** Open Language Menu List *********** */
-    // $('.language-list').removeClass('block');
-    // $('.language-list').hide();
-
     $(".language").on('click', function () {
         $(".language-list").toggleClass("hidden");
+        $(".notification-list").addClass("hidden");
+    });
+    $(".notification").on('click', function () {
+        $(".notification-list").toggleClass("hidden");
+        $(".language-list").addClass("hidden");
     });
 
     /*************** Nav Responsive *********** */
