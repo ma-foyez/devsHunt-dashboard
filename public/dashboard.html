@@ -26,12 +26,12 @@
 
     <section class="flex relative">
         <!-- dashboard sidebar start -->
-        <div class="w-[20%]">
+        <div class="md:w-[20%]  hidden md:block">
             <div
-                class="fixed left-0 top-0 p-4 dark:text-white  bg-white dark:bg-[#0F172A] shadow-md w-[20%] h-[100vh] overflow-y-auto z-50">
+                class="fixed left-0 top-16 md:top-0 p-4 dark:text-white  bg-white dark:bg-[#0F172A] shadow-md md:w-[20%] h-[100vh] overflow-y-auto z-50">
                 <div class="flex justify-center items-center">
                     <img src="./images/logo-mini.png" alt="devsHunt logo" class="w-12">
-                    <p class="font-mono text-2xl ml-2 font-semibold dark:text-white hidden md:inline-block">DevsHunt</p>
+                    <p class="font-mono text-xl md:text-2xl ml-2 font-semibold dark:text-white">DevsHunt</p>
                 </div>
                 <div class="relative">
                     <ul class="mt-3 list-none">
@@ -41,31 +41,49 @@
                             </a>
                         </li>
                         <li
-                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
                             <a href="#">
                                 <i class="fa-solid fa-users text-base mr-4"></i> Total Students
                             </a>
                         </li>
                         <li
-                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
                             <a href="addCourse.html">
                                 <i class="fa-solid fa-chart-area text-base mr-4"></i> Add Course
                             </a>
                         </li>
                         <li
-                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
                             <a href="courseList.html">
                                 <i class="fa-solid fa-chart-area text-base mr-4"></i> Courser List
                             </a>
                         </li>
                         <li
-                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
                             <a href="#">
                                 <i class="fa-solid fa-chart-pie text-base mr-4"></i> Student Progress
                             </a>
                         </li>
                         <li
-                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
                             <a href="#">
                                 <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
                             </a>
@@ -77,18 +95,92 @@
             </div>
         </div>
 
+        <!-- Mobile Sidebar Start -->
+        <div class="">
+            <div
+                class="fixed mobile-sidebar left-0 top-[54px] p-4 dark:text-white  bg-white dark:bg-[#0F172A] shadow-md md:w-[20%] h-[100vh] overflow-y-auto z-50">
+                <div class="flex justify-center items-center">
+                    <img src="./images/logo-mini.png" alt="devsHunt logo" class="w-12">
+                    <p class="font-mono text-xl md:text-2xl ml-2 font-semibold dark:text-white">DevsHunt</p>
+                </div>
+                <div class="relative">
+                    <ul class="mt-3 list-none">
+                        <li class="py-3 text-lg font-medium">
+                            <a href="dashboard.html">
+                                <i class="fa-solid fa-gauge text-gray-400 mr-2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-users text-base mr-4"></i> Total Students
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="addCourse.html">
+                                <i class="fa-solid fa-chart-area text-base mr-4"></i> Add Course
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="courseList.html">
+                                <i class="fa-solid fa-chart-area text-base mr-4"></i> Courser List
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-chart-pie text-base mr-4"></i> Student Progress
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 hover:text-slate-800 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Sidebar close -->
         <!-- dashboard sidebar end -->
 
         <!-- Dashboard content start -->
-        <div class="w-[80%]">
+        <div class="w-full md:w-[80%] ">
             <!-- Dashboard nav start -->
-            <nav class="dark:text-white  bg-white dark:bg-[#0F172A] shadow sticky top-0 left-0 w-full ">
+            <nav class="dark:text-white  bg-white dark:bg-[#0F172A] shadow sticky top-0 left-0 w-full z-50">
                 <div class="flex justify-between">
 
                     <div class="flex items-center ml-3">
-                        <!-- <i class="fa-solid fa-bars-staggered text-lg cursor-pointer"></i> -->
-                        <i class="fa-solid fa-outdent text-2xl cursor-pointer"></i>
-                        <div class="bg-slate-200 dark:bg-slate-700 rounded-sm ml-6">
+                        <span class="hidden md:block ">
+                            <i class="fa-solid fa-outdent text-2xl cursor-pointer"></i>
+                        </span>
+                        <span class="block md:hidden sidebar-toggle">
+                            <i class="fa-solid fa-outdent text-2xl cursor-pointer"></i>
+                        </span>
+                        <div class="bg-slate-200 dark:bg-slate-700 rounded-sm ml-6 hidden md:block">
                             <i class="fa-solid fa-magnifying-glass text-lg ml-3"></i>
                             <input type="search" placeholder="Search..."
                                 class="border-0 outline-none p-2 bg-slate-200 dark:bg-slate-700">
@@ -108,7 +200,7 @@
                                     <i class="fa-solid fa-angle-down text-gray-500 dark:text-white text-base ml-2"></i>
                                 </a>
 
-                                <div class="bg-white dark:bg-slate-700 absolute top-12 border border-gray-200 dark:border-slate-400 hidden shadow-md min-w-[180px] z-50 language-list"
+                                <div class="bg-white dark:bg-slate-700 absolute top-10 md:top-12 border border-gray-200 dark:border-slate-400 hidden shadow-md min-w-[180px] z-50 language-list"
                                     id="language-list">
                                     <ul class="list-none">
                                         <li>
@@ -144,12 +236,13 @@
                             </li>
 
                             <li class="group relative">
-                                <a href="#" class="text-gray-500 dark:text-white ml-6 text-xl notification">
+                                <a href="#"
+                                    class="text-gray-500 dark:text-white ml-4 md:ml-6 text-md md:text-xl notification">
                                     <i class="fa-solid fa-bell"></i>
                                 </a>
 
                                 <div
-                                    class="bg-white dark:bg-slate-700 absolute hidden top-12 border border-gray-200 dark:border-slate-600 -left-52 shadow-md min-w-[300px] z-50 notification-list">
+                                    class="bg-white dark:bg-slate-700 absolute hidden top-10 md:top-12 border border-gray-200 dark:border-slate-600 -left-52 shadow-md min-w-[300px] z-50 notification-list">
                                     <div class="flex justify-between p-4">
                                         <h4 class="text-gray-600 dark:text-white font-nunito font-semibold">Notification
                                         </h4>
@@ -157,8 +250,10 @@
                                             All</a>
                                     </div>
 
-                                    <div class="mt-4 p-4">
-                                        <h5 class="text-gray-400 dark:text-white font-nunito font-semibold">Today</h5>
+                                    <div class="p-2 px-4 md:p-4">
+                                        <h5
+                                            class="text-gray-400 dark:text-white font-nunito font-semibold text-sm md:text-base">
+                                            Today</h5>
                                         <div
                                             class="border border-gray-100 dark:border-slate-400 rounded-md bg-slate-100 dark:bg-slate-600 flex items-center p-3 mt-3 relative">
                                             <div
@@ -167,12 +262,14 @@
                                             </div>
                                             <div>
                                                 <h4
-                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer">
+                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer text-sm md:text-base">
                                                     Datacorp
                                                     <span class="text-gray-400 dark:text-gray-200 text-xs ml-3">1 min
                                                         age</span>
                                                 </h4>
-                                                <p class="text-gray-400 dark:text-white text-sm ml-4 cursor-pointer">M.A
+                                                <p
+                                                    class="text-gray-400 dark:text-white text-xs md:text-sm ml-4 cursor-pointer">
+                                                    M.A
                                                     Fayez reply
                                                     your comment..</p>
                                             </div>
@@ -188,12 +285,13 @@
                                             </div>
                                             <div>
                                                 <h4
-                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer">
+                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer text-sm md:text-base">
                                                     Admin
                                                     <span class="text-gray-400 dark:text-gray-200 text-xs ml-3">50 min
                                                         age</span>
                                                 </h4>
-                                                <p class="text-gray-400 dark:text-gray-200 text-sm ml-4 cursor-pointer">
+                                                <p
+                                                    class="text-gray-400 dark:text-gray-200 text-xs md:text-sm ml-4 cursor-pointer">
                                                     Create new user...
                                                 </p>
                                             </div>
@@ -202,9 +300,10 @@
                                                 class="fa-solid fa-xmark absolute right-2 top-2 text-gray-500 cursor-pointer"></i>
                                         </div>
                                     </div>
-                                    <div class="mt-4 p-4">
-                                        <h5 class="text-gray-400 dark:text-white font-nunito font-semibold">Yesterday
-                                        </h5>
+                                    <div class="p-4">
+                                        <h5
+                                            class="text-gray-400 dark:text-white font-nunito font-semibold text-sm md:text-base">
+                                            Yesterday</h5>
 
                                         <div
                                             class="border border-gray-100 dark:border-slate-400 rounded-md flex items-center p-3 mt-3 relative">
@@ -214,12 +313,13 @@
                                             </div>
                                             <div>
                                                 <h4
-                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer">
+                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer text-sm md:text-base">
                                                     Admin
                                                     <span class="text-gray-400 dark:text-gray-200 text-xs ml-3">21 hours
                                                         ago</span>
                                                 </h4>
-                                                <p class="text-gray-400 dark:text-gray-200 text-sm ml-4 cursor-pointer">
+                                                <p
+                                                    class="text-gray-400 dark:text-gray-200 text-xs md:text-sm ml-4 cursor-pointer">
                                                     Akash approve your
                                                     post request...</p>
                                             </div>
@@ -229,26 +329,29 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="mt-5 p-4 text-center border-t bg-white dark:bg-slate-600 border-t-gray-300 dark:border-t-slate-400 transition hover:bg-slate-100 cursor-pointer">
-                                        <a href="#" class="text-red-600 text-md font-nunito font-medium">View All</a>
+                                        class="mt-1 md:mt-5 p-2 md:p-4 text-center border-t bg-white dark:bg-slate-600 border-t-gray-300 dark:border-t-slate-400 transition hover:bg-slate-100 cursor-pointer">
+                                        <a href="#"
+                                            class="text-red-600 dark:text-white text-md font-nunito font-medium">View
+                                            All</a>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <a href="#" class="text-gray-500 dark:text-white ml-6 text-xl">
+                                <a href="#" class="text-gray-500 dark:text-white ml-4 md:ml-6 text-md md:text-xl">
                                     <i class="fa-solid fa-list"></i>
                                 </a>
                             </li>
                             <!-- Setting Section  -->
                             <li>
-                                <button class="text-gray-500 dark:text-white ml-6 text-xl toggle-setting"
+                                <button
+                                    class="text-gray-500 dark:text-white ml-4 md:ml-6 text-md md:text-xl toggle-setting"
                                     id="toggle-icon">
                                     <i class="fa-solid fa-gear"></i>
                                 </button>
                                 <div
                                     class="open-settings hidden h-[100vh] bg-white dark:bg-slate-700 absolute top-0 right-0 text-left shadow overflow-y w-[250px] ">
-                                    <div class="text-center bg-[#d3f5ff] flex justify-between items-center p-4">
-                                        <h4 class="text-gray-600 text-md font-nunito font-bold">Settings</h4>
+                                    <div class="text-center bg-[#d3f5ff] dark:bg-red-400 flex justify-between items-center p-4">
+                                        <h4 class="text-gray-600 dark:text-white text-md font-nunito font-bold">Settings</h4>
                                         <a href="#"
                                             class="bg-gray-600 h-8 w-8 rounded-full flex items-center justify-center toggle-setting">
                                             <i class="fa-solid fa-xmark text-white  cursor-pointer"></i>
@@ -274,13 +377,15 @@
                             <!-- Setting Section Close -->
                         </ul>
 
-                        <div>
+                        <div class="">
                             <div class="flex items-center ml-8 bg-slate-100 dark:bg-slate-700 p-2 cursor-pointer">
                                 <img src="./images/avatar1.png" alt="user" class="w-8 h-8 rounded-full">
                                 <div class="ml-2">
-                                    <h5 class="text-gray-600 dark:text-white font-semibold font-nunito">Dominic Keller
+                                    <h5
+                                        class="text-gray-600 dark:text-white font-semibold text-sm md:text-md font-nunito">
+                                        Dominic Keller
                                     </h5>
-                                    <p class="text-gray-400  text-sm">Founder</p>
+                                    <p class="text-gray-400 text-xs md:text-sm">Founder</p>
                                 </div>
                             </div>
 
@@ -329,20 +434,20 @@
                     </div>
                     <div class="basis-3/5">
                         <div class="bg-white dark:bg-slate-600 rounded shadow mt-2.5 p-2">
-                            <canvas id="line_chart" height="180" class="w-full"></canvas>
+                            <canvas id="line_chart" height="300" class="w-full"></canvas>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row mt-8">
                     <div class="basis-3/5">
-                        <div class="bg-white dark:bg-slate-600 rounded shadow mt-2.5 p-2">
-                            <canvas id="bar_cart" height="180" class="w-full"></canvas>
+                        <div class="bg-white dark:bg-slate-600 rounded shadow mt-1 p-2">
+                            <canvas id="bar_cart" height="300" class="w-full"></canvas>
                         </div>
                     </div>
                     <div class="basis-2/5">
                         <div class="bg-white dark:bg-slate-600 rounded shadow mt-2.5 p-2 ml-2">
-                            <canvas id="doughnut_cart" height="180" class="w-full"></canvas>
+                            <canvas id="doughnut_cart" height="300" class="w-full"></canvas>
                         </div>
                     </div>
                 </div>
