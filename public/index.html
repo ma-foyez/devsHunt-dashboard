@@ -84,7 +84,7 @@
     </section>
 
     <footer class="mt-3 text-center p-4">
-        <p class="text-gray-400"> 2018 - <span id="year" class="current-year"></span> &copy; Hyper - Coderthemes.com</p>
+        <p class="text-gray-400"> 2018 - <span id="year" class="current-year"></span> &copy; DevsHunt - All Rights Reserved</p>
     </footer>
 
     <!-- Script  -->
@@ -92,6 +92,10 @@
 
     <!-- Load Custom Script  -->
     <script src="./js/main.js"></script>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
