@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevsHunt || Course List</title>
+
+    <!-- Font Awesome Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class=" overflow-x-hidden">
+
+    <section class="flex relative">
+        <!-- dashboard sidebar start -->
+        <div class="w-[20%]">
+            <div
+                class="fixed left-0 top-0 p-4 dark:text-white  bg-white dark:bg-[#0F172A] shadow-md w-[20%] h-[100vh] overflow-y-auto z-50">
+                <div class="flex justify-center items-center">
+                    <img src="./images/logo-mini.png" alt="devsHunt logo" class="w-12">
+                    <p class="font-mono text-2xl ml-2 font-semibold dark:text-white hidden md:inline-block">DevsHunt</p>
+                </div>
+                <div class="relative">
+                    <ul class="mt-3 list-none">
+                        <li class="py-3 text-lg font-medium">
+                            <a href="dashboard.html">
+                                <i class="fa-solid fa-gauge text-gray-400 mr-2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-users text-base mr-4"></i> Total Students
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="addCourse.html">
+                                <i class="fa-solid fa-chart-area text-base mr-4"></i> Add Course
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="courseList.html">
+                                <i class="fa-solid fa-chart-area text-base mr-4"></i> Courser List
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-chart-pie text-base mr-4"></i> Student Progress
+                            </a>
+                        </li>
+                        <li
+                            class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-t-slate-100">
+                            <a href="#">
+                                <i class="fa-solid fa-calendar-days text-base mr-4"></i> Dateline
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- dashboard sidebar end -->
+
+        <!-- Dashboard content start -->
+        <div class="w-[80%]">
+            <!-- Dashboard nav start -->
+            <nav class="dark:text-white  bg-white dark:bg-[#0F172A] shadow sticky top-0 left-0 w-full z-50">
+                <div class="flex justify-between">
+
+                    <div class="flex items-center ml-3">
+                        <!-- <i class="fa-solid fa-bars-staggered text-lg cursor-pointer"></i> -->
+                        <i class="fa-solid fa-outdent text-2xl cursor-pointer"></i>
+                        <div class="bg-slate-200 dark:bg-slate-700 rounded-sm ml-6">
+                            <i class="fa-solid fa-magnifying-glass text-lg ml-3"></i>
+                            <input type="search" placeholder="Search..."
+                                class="border-0 outline-none p-2 bg-slate-200 dark:bg-slate-700">
+                            <button class="bg-red-600 py-2 px-6 text-white rounded-sm shadow-md font-medium">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <ul class="list-none flex">
+                            <li class="group relative">
+                                <a href="#" class="flex items-center language" id="language">
+                                    <img src="./images/languages/us.jpg" alt="English" class="w-7">
+                                    <span
+                                        class="text-gray-500 dark:text-white text-base ml-2 font-nunito font-medium">English</span>
+                                    <i class="fa-solid fa-angle-down text-gray-500 dark:text-white text-base ml-2"></i>
+                                </a>
+
+                                <div class="bg-white dark:bg-slate-700 absolute top-12 border border-gray-200 dark:border-slate-400 hidden shadow-md min-w-[180px] z-50 language-list"
+                                    id="language-list">
+                                    <ul class="list-none">
+                                        <li>
+                                            <a href="#"
+                                                class="flex items-center bg-white dark:bg-slate-700 hover:bg-slate-50 py-4 px-4 dark:hover:bg-slate-800 transition">
+                                                <img src="./images/languages/bangladesh.png" alt="English" class="w-7">
+                                                <span
+                                                    class="text-gray-500 dark:text-white text-base ml-2 font-nunito font-medium">Bangladesh
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="flex items-center bg-white dark:bg-slate-700 hover:bg-slate-50 py-4 px-4 dark:hover:bg-slate-800 transition">
+                                                <img src="./images/languages/germany.jpg" alt="English" class="w-7">
+                                                <span
+                                                    class="text-gray-500 dark:text-white text-base ml-2 font-nunito font-medium">German
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="flex items-center bg-white dark:bg-slate-700 hover:bg-slate-50 py-4 px-4 dark:hover:bg-slate-800 transition">
+                                                <img src="./images/languages/italy.jpg" alt="English" class="w-7">
+                                                <span
+                                                    class="text-gray-500 dark:text-white text-base ml-2 font-nunito font-medium">Italian
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="group relative">
+                                <a href="#" class="text-gray-500 dark:text-white ml-6 text-xl notification">
+                                    <i class="fa-solid fa-bell"></i>
+                                </a>
+
+                                <div
+                                    class="bg-white dark:bg-slate-700 absolute hidden top-12 border border-gray-200 dark:border-slate-600 -left-52 shadow-md min-w-[300px] z-50 notification-list">
+                                    <div class="flex justify-between p-4">
+                                        <h4 class="text-gray-600 dark:text-white font-nunito font-semibold">Notification
+                                        </h4>
+                                        <a href="#" class="text-gray-400 dark:text-gray-300 text-sm font-normal">Clear
+                                            All</a>
+                                    </div>
+
+                                    <div class="mt-4 p-4">
+                                        <h5 class="text-gray-400 dark:text-white font-nunito font-semibold">Today</h5>
+                                        <div
+                                            class="border border-gray-100 dark:border-slate-400 rounded-md bg-slate-100 dark:bg-slate-600 flex items-center p-3 mt-3 relative">
+                                            <div
+                                                class="bg-indigo-800 h-10 w-10 p-3 rounded-full text-white flex items-center justify-center">
+                                                <i class="fa-solid fa-id-card-clip"></i>
+                                            </div>
+                                            <div>
+                                                <h4
+                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer">
+                                                    Datacorp
+                                                    <span class="text-gray-400 dark:text-gray-200 text-xs ml-3">1 min
+                                                        age</span>
+                                                </h4>
+                                                <p class="text-gray-400 dark:text-white text-sm ml-4 cursor-pointer">M.A
+                                                    Fayez reply
+                                                    your comment..</p>
+                                            </div>
+
+                                            <i
+                                                class="fa-solid fa-xmark absolute right-2 top-2 text-gray-500 cursor-pointer"></i>
+                                        </div>
+                                        <div
+                                            class="border border-gray-100 dark:border-slate-400 rounded-md flex items-center p-3 mt-3 relative">
+                                            <div
+                                                class="bg-violet-800 h-10 w-10 p-3 rounded-full text-white flex items-center justify-center">
+                                                <i class="fa-solid fa-user-plus"></i>
+                                            </div>
+                                            <div>
+                                                <h4
+                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer">
+                                                    Admin
+                                                    <span class="text-gray-400 dark:text-gray-200 text-xs ml-3">50 min
+                                                        age</span>
+                                                </h4>
+                                                <p class="text-gray-400 dark:text-gray-200 text-sm ml-4 cursor-pointer">
+                                                    Create new user...
+                                                </p>
+                                            </div>
+
+                                            <i
+                                                class="fa-solid fa-xmark absolute right-2 top-2 text-gray-500 cursor-pointer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 p-4">
+                                        <h5 class="text-gray-400 dark:text-white font-nunito font-semibold">Yesterday
+                                        </h5>
+
+                                        <div
+                                            class="border border-gray-100 dark:border-slate-400 rounded-md flex items-center p-3 mt-3 relative">
+                                            <div
+                                                class="bg-orange-600 h-10 w-10 p-3 rounded-full text-white flex items-center justify-center">
+                                                <i class="fa-solid fa-comments"></i>
+                                            </div>
+                                            <div>
+                                                <h4
+                                                    class="text-gray-500 dark:text-white font-nunito font-semibold ml-4 cursor-pointer">
+                                                    Admin
+                                                    <span class="text-gray-400 dark:text-gray-200 text-xs ml-3">21 hours
+                                                        ago</span>
+                                                </h4>
+                                                <p class="text-gray-400 dark:text-gray-200 text-sm ml-4 cursor-pointer">
+                                                    Akash approve your
+                                                    post request...</p>
+                                            </div>
+
+                                            <i
+                                                class="fa-solid fa-xmark absolute right-2 top-2 text-gray-500 cursor-pointer"></i>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-5 p-4 text-center border-t bg-white dark:bg-slate-600 border-t-gray-300 dark:border-t-slate-400 transition hover:bg-slate-100 cursor-pointer">
+                                        <a href="#" class="text-red-600 text-md font-nunito font-medium">View All</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-500 dark:text-white ml-6 text-xl">
+                                    <i class="fa-solid fa-list"></i>
+                                </a>
+                            </li>
+                            <!-- Setting Section  -->
+                            <li>
+                                <button class="text-gray-500 dark:text-white ml-6 text-xl toggle-setting"
+                                    id="toggle-icon">
+                                    <i class="fa-solid fa-gear"></i>
+                                </button>
+                                <div
+                                    class="open-settings hidden h-[100vh] bg-white dark:bg-slate-700 absolute top-0 right-0 text-left shadow overflow-y w-[250px] ">
+                                    <div class="text-center bg-[#d3f5ff] flex justify-between items-center p-4">
+                                        <h4 class="text-gray-600 text-md font-nunito font-bold">Settings</h4>
+                                        <a href="#"
+                                            class="bg-gray-600 h-8 w-8 rounded-full flex items-center justify-center toggle-setting">
+                                            <i class="fa-solid fa-xmark text-white  cursor-pointer"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <h5
+                                            class="text-gray-600 dark:text-white font-nunito font-semibold border-b py-2">
+                                            Theme</h5>
+
+                                        <div class="mt-4 space-y-4">
+                                            <div class="bg-gray-300 h-10 w-10 rounded-full flex justify-center items-center cursor-pointer"
+                                                id="change_theme">
+                                                <i class="fa-solid fa-moon dark:hidden"></i>
+                                                <i
+                                                    class="fa-solid fa-circle-half-stroke hidden dark:block text-gray-700"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Setting Section Close -->
+                        </ul>
+
+                        <div>
+                            <div class="flex items-center ml-8 bg-slate-100 dark:bg-slate-700 p-2 cursor-pointer">
+                                <img src="./images/avatar1.png" alt="user" class="w-8 h-8 rounded-full">
+                                <div class="ml-2">
+                                    <h5 class="text-gray-600 dark:text-white font-semibold font-nunito">Dominic Keller
+                                    </h5>
+                                    <p class="text-gray-400  text-sm">Founder</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+            <!-- Dashboard nav end -->
+
+            <!-- Dashboard main content start -->
+            <div class="p-4 bg-slate-100  dark:text-white dark:bg-[#1E293B]">
+                <h4 class="text-gray-600 dark:text-white font-nunito font-bold text-sm">Dashboard / Course list</h4>
+                <div class="mt-5 bg-white dark:bg-slate-700 p-4 rounded shadow">
+                    <table id="table_id" class="display">
+                        <thead>
+                            <tr>
+                                <th>Course Name</th>
+                                <th>Course Fee</th>
+                                <th>Instructor</th>
+                                <th>Technology</th>
+                                <th>Starting Date</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Complete Full Stack Course</td>
+                                <td>7000 Tk.</td>
+                                <td>Maniruzzaman Akash</td>
+                                <td>
+                                    <span
+                                        class="bg-[#00719e] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">HTML
+                                        CSS</span>
+                                    <span class="bg-[#5a0156] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Bootstrap
+                                    </span>
+                                    <span class="bg-[#8002b3] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        Tailwind CSS
+                                    </span>
+                                    <span class="bg-[#d47f00] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        JavaScript
+                                    </span>
+                                    <span class="bg-[#40008a] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        React JS, Redux
+                                    </span>
+                                    <span class="bg-[#0e48e9] text-white p-1 rounded text-xs font-bold cursor-pointer m-1">
+                                        PHP, Laravel
+                                    </span>
+                                </td>
+                                <td>
+                                    25-10-2021
+                                </td>
+                                <td>
+                                    6 Month
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Dashboard main content end -->
+
+            </div>
+            <!-- Dashboard content end -->
+    </section>
+
+    <!-- Script  -->
+    <script src="./vendors/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Load Custom Script  -->
+    <script src="./js/main.js"></script>
+    <script src="./vendors/dataTable/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
+    </script>
+</body>
+
+</html>

@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body class=" overflow-x-hidden">
 
     <section class="flex relative">
         <!-- dashboard sidebar start -->
@@ -300,32 +300,36 @@
                 <h4 class="text-gray-600 dark:text-white font-nunito font-bold text-sm">Dashboard / Add Course</h4>
                 <div class="mt-5 bg-white dark:bg-slate-700 p-4 rounded shadow">
                     <form action="" method="GET" class="mt-5 text-left">
-                        <div class="flex">
+                        <div class="flex flex-col md:flex-row">
                             <div class="basis-1/2">
                                 <div class="m-1">
                                     <div class="group">
-                                        <label for="price" class="block text-base font-medium text-gray-100 dark:text-white"> Course
+                                        <label for="price"
+                                            class="block text-base font-medium text-gray-100 dark:text-white"> Course
                                             Name</label>
                                         <input type="text" name="name" id="name"
                                             class="rounded-sm w-full border p-2 mt-3 outline-none hover:outline-1 hover:outline-red-400 transition-all dark:bg-slate-600"
                                             placeholder="Enter Course Name">
                                     </div>
                                     <div class="group mt-3">
-                                        <label for="price" class="block text-base font-medium text-gray-500 dark:text-white"> Course
+                                        <label for="price"
+                                            class="block text-base font-medium text-gray-500 dark:text-white"> Course
                                             Overview</label>
                                         <textarea name="course" id="" rows="5"
                                             class="rounded-sm w-full border p-2 mt-3 outline-none hover:outline-1 hover:outline-red-400 transition-all dark:bg-slate-600"
                                             placeholder="Short Course Overview"></textarea>
                                     </div>
                                     <div class="group mt-3">
-                                        <label for="price" class="block text-base font-medium text-gray-500 dark:text-white"> Course
+                                        <label for="price"
+                                            class="block text-base font-medium text-gray-500 dark:text-white"> Course
                                             Start Date</label>
                                         <input type="date" name="date" id="date"
                                             class="rounded-sm w-full border p-2 mt-3 outline-none hover:outline-1 hover:outline-red-400 transition-all dark:bg-slate-600">
                                     </div>
 
                                     <div class="group mt-3">
-                                        <label for="price" class="block text-base font-medium text-gray-500 dark:text-white"> Course
+                                        <label for="price"
+                                            class="block text-base font-medium text-gray-500 dark:text-white"> Course
                                             Fee (Tk.)</label>
                                         <input type="number" name="name" id="name"
                                             class="rounded-sm w-full border p-2 mt-3 outline-none hover:outline-1 hover:outline-red-400 transition-all dark:bg-slate-600"
@@ -336,7 +340,8 @@
                             <div class="basis-1/2">
                                 <div class="m-1">
                                     <div class="group">
-                                        <label for="price" class="block text-base font-medium text-gray-500 dark:text-white">
+                                        <label for="price"
+                                            class="block text-base font-medium text-gray-500 dark:text-white">
                                             Technology</label>
                                         <select name="category" id="category"
                                             class="rounded-sm w-full border p-2 mt-3 outline-none hover:outline-1 hover:outline-red-400 transition-all dark:bg-slate-600">
@@ -348,7 +353,8 @@
                                         </select>
                                     </div>
                                     <div class="group mt-3">
-                                        <label for="price" class="block text-base font-medium text-gray-500 dark:text-white">
+                                        <label for="price"
+                                            class="block text-base font-medium text-gray-500 dark:text-white">
                                             Banner</label>
                                         <p class="text-gray-400 py-2">
                                             Recommended thumbnail size 800x400 (px).
@@ -380,6 +386,12 @@
 
     <!-- Load Custom Script  -->
     <script src="./js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.dropify').dropify();
+        });
+    </script>
 </body>
 
 </html>
